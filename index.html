@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#"  onclick ="reload()", class = "news-logo">
+                <img src="istockphoto.jpg" alt="news-logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemCilck('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="finace" onclick="onNavItemCilck('finace')">finance</li>
+                    <li class="hover-link nav-item" id="policts" onclick="onNavItemCilck('policts')">policts</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input type="text" class="news-input" id ="search-text" placeholder="eg.sicence">
+                <button class = "search-button" id ="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex " id="cards-container">
+        </div>
+    </main>
+
+    <template id = "template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is title </h3>
+                <h6 class ="news-source" id="news-source">End gadget 26/06/2023</h6>
+                <p class="news-description" id="news-description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla quae quo modi, eligendi commodi quos et accusantium a odit laborum?
+                </p>
+            </div>
+        </div>
+    </template>
+   
+    <script src="script.js"></script>
+</body>
+</html>
